@@ -1,6 +1,5 @@
 ﻿@import url("./plugin/flexslider.css");
-@import url("font-awesome.css");
-@import url("ionicons.css");
+@import url("linea_icon_font.css");
 @import url("./plugin/owl.carousel.css");
 @import url("./plugin/mediaelementplayer.css");
 @import url("./plugin/colorbox.css");
@@ -225,8 +224,14 @@ p {
 }
 
 .dark-bg {
-    background: #323232;
+    background: #363e48;
     color: #fff;
+}
+.dark-bg a {
+ color: #fff;
+}
+.dark-bg a:hover {
+ color: #2db2c5;
 }
 
     .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6, .dark-bg p, .dark-bg .link, .dark-bg .container-icon, .dark-bg .page-icon-top {
@@ -433,13 +438,13 @@ button {
 
 .btn-color-a, .btn-color-b {
     color: #fff;
-    background: #e6ae49;
+    background: #2DB2C5;
     border: none;
 }
 
     .btn-color-a:hover {
         color: #fff;
-        background: rgba(230,174,73,0.85);
+        background: #363e48;
     }
 
     .btn-color-b:hover {
@@ -4659,6 +4664,37 @@ o-flow-hidden {
         top: 29%;
     }
 }
+
+/* Contact Form, Map, contact-info       ||--------------------------- */
+
+/* form */
+.contact-form textarea {
+    min-height: 165px;
+    resize: none;
+    overflow: auto;
+}
+
+.contact-form .btn-contact-submit {
+    height: 100px;
+    width: 100px;
+    line-height: 1;
+    border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+}
+
+/* map */
+.map {
+    height: 400px;
+    width: 100%;
+}
+
+/* contact-info */
+.contact-link a {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
 
 /* ----------------------------------*/
 /* Scroll Top Arrow */
