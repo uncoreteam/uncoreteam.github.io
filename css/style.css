@@ -1,8 +1,12 @@
 ﻿@import url("./plugin/flexslider.css");
+@import url("font-awesome.css");
+@import url("ionicons.css");
 @import url("./plugin/owl.carousel.css");
 @import url("./plugin/mediaelementplayer.css");
 @import url("./plugin/colorbox.css");
 @import url("./plugin/jquery.fs.tipper.css");
+@import url("./plugins/magnific-popup.css");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 
 /* 
@@ -3047,15 +3051,15 @@ form label.error {
 }
 
 .bg-img1 {
-    background-image: url("../img/full/01.jpg");
+    background-image: url("../img/bg-1.jpg");
 }
 
 .bg-img2 {
-    background-image: url("../img/full/02.jpg");
+    background-image: url("../img/bg-2.jpg");
 }
 
 .bg-img3 {
-    background-image: url("../img/full/03.jpg");
+    background-image: url("../img/bg-3.jpg");
 }
 
 .bg-img4 {
@@ -3613,7 +3617,7 @@ form label.error {
         }
 
             .container-filter li a.active {
-                color: #e6ae49;
+                color: #2DB2C5;
             }
 
 .item-box {
@@ -4310,13 +4314,17 @@ ul.project-detail-block, .project-detail-block ul {
     position: static;
 }
 
+o-flow-hidden {
+    overflow: hidden;
+}
+
 .owl-carousel.white .owl-controls .owl-page span {
     background: none repeat scroll 0 0 #fff;
 }
 
 .owl-carousel.white .owl-controls .owl-page.active span {
     background: rgba(0, 0, 0, 0);
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 }
 
 .nf-carousel-theme {
@@ -4342,40 +4350,78 @@ ul.project-detail-block, .project-detail-block ul {
 
     .content-carousel .owl-controls .owl-buttons .owl-prev,
     .content-carousel .owl-controls .owl-buttons .owl-next,
-    .image-slider .owl-controls .owl-buttons .owl-prev,
-    .image-slider .owl-controls .owl-buttons .owl-next,
-    .fullwidth-slider .owl-controls .owl-buttons .owl-prev,
-    .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+    .image-carousel .owl-controls .owl-buttons .owl-prev,
+    .image-carousel .owl-controls .owl-buttons .owl-next,
+    .intro-text-slider .owl-controls .owl-buttons .owl-prev,
+    .intro-text-slider .owl-controls .owl-buttons .owl-next,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-prev,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
-        background: rgba(245,245,245,0.8);
-        color: #252525;
+        color: #fff;
+        /*text-align: center;*/
+        position: absolute;
+        z-index: 3;
         display: block;
         top: 50%;
         transition: all 0.25s ease 0s;
         -o-transition: all 0.25s ease 0s;
         -moz-transition: all 0.25s ease 0s;
         -webkit-transition: all 0.25s ease 0s;
-        z-index: 3;
-        position: absolute;
-        text-align: center;
+        width: 100px;
+        height: 100px;
     }
+
+        .content-carousel .owl-controls .owl-buttons .owl-prev:before,
+        .content-carousel .owl-controls .owl-buttons .owl-next:before,
+        .image-carousel .owl-controls .owl-buttons .owl-prev:before,
+        .image-carousel .owl-controls .owl-buttons .owl-next:before,
+        .intro-text-slider .owl-controls .owl-buttons .owl-prev:before,
+        .intro-text-slider .owl-controls .owl-buttons .owl-next:before,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev:before,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next:before {
+            background: rgba(51,51,51,0.8);
+            content: "";
+            transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            height: 120%;
+            width: 120%;
+            position: absolute;
+            top: 0;
+        }
+
+        .content-carousel .owl-controls .owl-buttons .owl-prev:before,
+        .image-carousel .owl-controls .owl-buttons .owl-prev:before,
+        .intro-text-slider .owl-controls .owl-buttons .owl-prev:before,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-prev:before {
+            left: 0;
+            margin-left: -60%;
+        }
+
+        .content-carousel .owl-controls .owl-buttons .owl-next:before,
+        .image-carousel .owl-controls .owl-buttons .owl-next:before,
+        .intro-text-slider .owl-controls .owl-buttons .owl-next:before,
+        .nf-carousel-theme .owl-controls .owl-buttons .owl-next:before {
+            right: 0;
+            margin-right: -60%;
+        }
 
         .content-carousel .owl-controls .owl-buttons .owl-prev:hover,
         .content-carousel .owl-controls .owl-buttons .owl-next:hover,
         .image-slider .owl-controls .owl-buttons .owl-prev:hover,
         .image-slider .owl-controls .owl-buttons .owl-next:hover,
-        .fullwidth-slider .owl-controls .owl-buttons .owl-prev:hover,
-        .fullwidth-slider .owl-controls .owl-buttons .owl-next:hover,
+        .intro-text-slider .owl-controls .owl-buttons .owl-prev:hover,
+        .intro-text-slider .owl-controls .owl-buttons .owl-next:hover,
         .nf-carousel-theme .owl-controls .owl-buttons .owl-prev:hover,
         .nf-carousel-theme .owl-controls .owl-buttons .owl-next:hover {
             /*background: #fff;*/
-            color: #e6ae49;
+            color: #2DB2C5;
         }
 
     .content-carousel .owl-controls .owl-buttons .owl-next,
-    .image-slider .owl-controls .owl-buttons .owl-next,
-    .fullwidth-slider .owl-controls .owl-buttons .owl-next,
+    .image-carousel .owl-controls .owl-buttons .owl-next,
+    .intro-text-slider .owl-controls .owl-buttons .owl-next,
     .nf-carousel-theme .owl-controls .owl-buttons .owl-next {
         right: 0;
     }
@@ -4394,63 +4440,73 @@ ul.project-detail-block, .project-detail-block ul {
 
     .content-carousel:hover .owl-controls .owl-buttons .owl-prev,
     .content-carousel:hover .owl-controls .owl-buttons .owl-next,
-    .image-slider:hover .owl-controls .owl-buttons .owl-prev,
-    .image-slider:hover .owl-controls .owl-buttons .owl-next,
-    .fullwidth-slider:hover .owl-controls .owl-buttons .owl-prev,
-    .fullwidth-slider:hover .owl-controls .owl-buttons .owl-next,
+    .image-carousel:hover .owl-controls .owl-buttons .owl-prev,
+    .image-carousel:hover .owl-controls .owl-buttons .owl-next,
+    .intro-text-slider:hover .owl-controls .owl-buttons .owl-prev,
+    .intro-text-slider:hover .owl-controls .owl-buttons .owl-next,
     .nf-carousel-theme:hover .owl-controls .owl-buttons .owl-prev,
     .nf-carousel-theme:hover .owl-controls .owl-buttons .owl-next {
         margin-right: 0;
         margin-left: 0;
-        opacity: 1;
+        opacity: 0;
     }
 
 
-/* -------------------------------------*/
-/* Singel Item slider (Images & Contant Slider) ---------*/
-/* -------------------------------------*/
-.content-carousel .owl-controls .owl-pagination,
-.image-slider .owl-controls .owl-pagination,
-.fullwidth-slider .owl-controls .owl-pagination,
-.item1-carousel .owl-controls .owl-pagination {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    bottom: 15px;
-    left: 0;
-    text-align: center;
-    width: 100%;
+/* Singel Item slider (Images & Contant Slider) */
+.content-carousel, .image-carousel, .intro-text-slider {
+    overflow: hidden;
+    position: relative;
 }
 
-.content-carousel .owl-controls .owl-buttons .owl-prev,
-.content-carousel .owl-controls .owl-buttons .owl-next,
-.image-slider .owl-controls .owl-buttons .owl-prev,
-.image-slider .owl-controls .owl-buttons .owl-next,
-.fullwidth-slider .owl-controls .owl-buttons .owl-prev,
-.fullwidth-slider .owl-controls .owl-buttons .owl-next {
-    width: 51px;
-    height: 51px;
-    line-height: 51px;
-    font-size: 21px;
-    margin-top: -25px;
-}
+    .content-carousel .owl-controls .owl-pagination,
+    .image-carousel .owl-controls .owl-pagination,
+    .intro-text-slider .owl-controls .owl-pagination,
+    .item1-carousel .owl-controls .owl-pagination {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        bottom: 15px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
 
-.content-carousel .owl-controls .owl-buttons .owl-prev,
-.image-slider .owl-controls .owl-buttons .owl-prev,
-.fullwidth-slider .owl-controls .owl-buttons .owl-prev {
-    left: 0;
-    margin-left: -51px;
-    opacity: 0;
-}
+    .content-carousel .owl-controls .owl-buttons .owl-prev,
+    .content-carousel .owl-controls .owl-buttons .owl-next,
+    .image-carousel .owl-controls .owl-buttons .owl-prev,
+    .image-carousel .owl-controls .owl-buttons .owl-next,
+    .intro-text-slider .owl-controls .owl-buttons .owl-prev,
+    .intro-text-slider .owl-controls .owl-buttons .owl-next {
+        width: 51px;
+        height: 51px;
+        line-height: 57px;
+        font-size: 21px;
+        margin-top: -25px;
+    }
 
-.content-carousel .owl-controls .owl-buttons .owl-next,
-.image-slider .owl-controls .owl-buttons .owl-next,
-.fullwidth-slider .owl-controls .owl-buttons .owl-next {
-    right: 0;
-    margin-right: -51px;
-    opacity: 0;
-}
+    .content-carousel .owl-controls .owl-buttons .owl-prev,
+    .image-carousel .owl-controls .owl-buttons .owl-prev,
+    .intro-text-slider .owl-controls .owl-buttons .owl-prev {
+        left: 0;
+        margin-left: -51px;
+        opacity: 0;
+        text-align: left;
+        padding-left: 10px;
+    }
 
+    .content-carousel .owl-controls .owl-buttons .owl-next,
+    .image-carousel .owl-controls .owl-buttons .owl-next,
+    .intro-text-slider .owl-controls .owl-buttons .owl-next {
+        right: 0;
+        margin-right: -51px;
+        opacity: 0;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .content-carousel img, .image-carousel .item img {
+        width: 100%;
+    }
 /*===========================================================================================*/
 /* Preloader ------------------------- */
 /*===========================================================================================*/
